@@ -21,10 +21,17 @@ spec:
       tls:
         mode: DISABLE
   analysis:
+    # schedule interval (default 60s)
     interval: 1m
-    threshold: 10
-    maxWeight: 50
-    stepWeight: 5
+    # total number of iterations
+    iterations: 10
+    # max number of failed iterations before rollback
+    threshold: 2
+    # canary match condition
+    match:
+      - headers:
+          user-agent:
+            regex: ".*Firefox.*"
     metrics:
       - name: istio_request_duration_seconds_sum
         thresholdRange:
