@@ -2,9 +2,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "chatbot.fullname" . }}
+  name: {{ include "frontend-testab.fullname" . }}
   labels:
-{{- include "chatbot.labels" . | nindent 4 }}
+{{- include "frontend-testab.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -13,5 +13,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "chatbot.selectorLabels" . | nindent 4 }}
+    {{- include "frontend-testab.selectorLabels" . | nindent 4 }}
 {{- end -}}
