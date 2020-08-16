@@ -12,6 +12,7 @@ frontend-testab-svc-account
 
 {{- define "frontend-testab.labels" -}}
 name: {{ .Chart.Name }}
+app: {{ .Chart.Name }}
 version: "{{ .Chart.AppVersion }}"
 {{- end -}}
 

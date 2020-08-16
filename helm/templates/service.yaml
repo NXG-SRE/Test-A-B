@@ -9,9 +9,9 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: 80
       protocol: TCP
-      name: http
+      name: http-web
   selector:
     {{- include "frontend-testab.selectorLabels" . | nindent 4 }}
 {{- end -}}
