@@ -1,20 +1,20 @@
-{{- define "chatbot.name" -}}
-chatbot-api
+{{- define "frontend-testab.name" -}}
+frontend-testab
 {{- end -}}
 
-{{- define "chatbot.fullname" -}}
-chatbot-api
+{{- define "frontend-testab.fullname" -}}
+frontend-testab
 {{- end -}}
 
-{{- define "chatbot.serviceAccountName" -}}
-chatbot-api-svc-account
+{{- define "frontend-testab.serviceAccountName" -}}
+frontend-testab-svc-account
 {{- end -}}
 
-{{- define "chatbot.labels" -}}
+{{- define "frontend-testab.labels" -}}
 name: {{ .Chart.Name }}
 version: "{{ .Chart.AppVersion }}"
 {{- end -}}
 
-{{- define "chatbot.selectorLabels" -}}
-app: chatbot-api
+{{- define "frontend-testab.selectorLabels" -}}
+app: frontend-testab
 {{- end -}}
