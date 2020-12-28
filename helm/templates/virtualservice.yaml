@@ -7,7 +7,7 @@ spec:
   hosts:
   - {{ .Values.gateway.host.fqdn }}
   gateways:
-  - {{ include "frontend-testab.fullname" . }}-gateway
+  - {{ .Values.gateway.name }}
   http:
   - match:
     - uri:
